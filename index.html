@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Web Accessibility Demo</title>
+	<link rel="stylesheet" type="text/css" href="reset.css" />
+	<link rel="stylesheet" type="text/css" href="demo.css" />
+</head>
+<body>
+  <header id="top" role="banner">
+    <ul class="skip-links">
+      <li>
+        <a href="#main" class="visuallyhidden focusable">Skip to main content</a>
+      </li>
+      <li>
+        <a href="#footer" class="visuallyhidden focusable">Skip to footer</a>
+      </li>
+    </ul>
+    <h1>Web Accessibility Demo</h1>
+  </header>
+  <main id="main">
+    <section>
+      <article>
+        <h2>Form Labels</h2>
+        <label for="name-field">Name</label>
+        <input type="text" id="name_field">
+        <br/>
+        <label for="species_dog">Dog</label>
+        <input type="radio" id="species_dog" name="species">
+        <label for="species_cat">Cat</label>
+        <input type="radio" id="species_cat" name="species">
+      </article>
+      <article>
+        <h2 tabindex="0">Links</h2>
+        <ul>
+          <li><a tabindex="-1" href="http://en.wikipedia.org/wiki/Wallace_and_Gromit">Wallace &amp; Gromit</a></li>
+          <li><a tabindex="0"href="http://en.wikipedia.org/wiki/Animal_(Muppet)" target="_blank" title="Link opens in a new window">
+          Animal<span class="visuallyhidden"> opens in a new window</span></a></li>
+        </ul>
+      </article>
+      <article>
+        <h2>Offscreen content</h2>
+        <div id="animal">
+          <div>
+            <h3 class="visuallyhidden">Muppets Animal Drummer</h3>
+          </div>
+        </div>
+      </article>
+    </section>
+</main>
+<footer id="footer">
+&copy; 2016 Kids, Incorporated
+</footer>
+</body>
+</html>
